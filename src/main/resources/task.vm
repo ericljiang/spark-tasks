@@ -1,0 +1,9 @@
+<tr>
+  <td>$task.getId()</td>
+  <td>$task.getName()</td>
+  <td>$task.getHours()</td>
+  <td>$task.getDueDate().toString()</td>
+</tr>
+#foreach ($task in $task.getSubtasks())
+  #parse("task.vm")
+#end
